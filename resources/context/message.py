@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Any
 
 
@@ -11,10 +11,10 @@ class Message(ABC):
         pass
 
     @abstractmethod
-    def __next__(self):
+    def __next__(self) -> Any:
         pass
 
-    def __iter__(self):
+    def __iter__(self) -> "Message":
         return self
 
     @property
