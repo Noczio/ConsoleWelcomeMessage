@@ -11,4 +11,4 @@
 * No extra libraries needed
 * App made in Spanish
 
-Clone and change it as you wish 🎨. This was made with the cleanest code possible.
+Clone and change it as you wish 🎨. This was made with the cleanest code possible
