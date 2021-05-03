@@ -23,7 +23,7 @@ def get_selected_menu() -> str:
 
 def show_options() -> None:
     """Function than prints main_menu_dictionary index and value in a for loop"""
-    print("")
+    print("")  # Line jump for aesthetic purposes
     for menu_index, menu_value in main_menu_dictionary.items():
         print(f"{menu_index}. {menu_value}")
 
