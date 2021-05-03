@@ -24,9 +24,12 @@ def show_one_message() -> None:
     """Function that shows only one message from a WelcomeMessage instance. User must provide a valid index"""
     # Create a WelcomeMessage instance and then get user input
     message = WelcomeMessage()
-    min_index = 1
-    max_index = len(message)
-    # Call get_user_input with min_index and max_index. Answer minus 1 because python positions start from 0
-    user_message_index = get_user_input(min_index, max_index)-1
-    # Finally, show a message with the provided user_message_index
-    show_output(message, user_message_index)
+    if len(message) > 0:
+        min_index = 1
+        max_index = len(message)
+        # Call get_user_input with min_index and max_index. Answer minus 1 because python positions start from 0
+        user_message_index = get_user_input(min_index, max_index)-1
+        # Finally, show a message with the provided user_message_index
+        show_output(message, user_message_index)
+    else:
+        print("\nNo se encontraron mensajes")
