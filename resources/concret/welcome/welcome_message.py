@@ -15,11 +15,12 @@ class WelcomeMessage(Message):
 
     def __next__(self) -> dict:
         """__next__ implementation for class WelcomeMessage"""
-        self._current_index += 1
         if self._current_index > self._max_index:
             self._current_index = 0
             raise StopIteration
-        return self.data[self._current_index]
+        actual_data = self.data[self._current_index]
+        self._current_index += 1
+        return actual_data
 
     def __getitem__(self, index: int) -> tuple:
         """__getitem__ implementation for class WelcomeMessage"""
