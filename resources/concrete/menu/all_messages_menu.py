@@ -12,10 +12,13 @@ class AllMessageMenu(Menu):
     def __repr__(self) -> str:
         """Get author and quote from a WelcomeMessage instance in a for loop, then print those variables"""
         output = ""
-        for data in self.message:
+        for counter, data in enumerate(self.message, start=0):
             author = data["Author"]
             quote = data["Quote"]
-            output += f"\n*{author}, dice: {quote}"
+            if counter < self.max_index - 1:
+                output += f"\n*{author}, dice: {quote}\n"
+            else:
+                output += f"\n*{author}, dice: {quote}"
         return output
 
 
