@@ -21,8 +21,8 @@ class WelcomeMessage(Message):
     def __getitem__(self, index: int) -> tuple:
         if (index <= self._max_index) and (index >= -self._max_index):
             actual_data = self.data[index]
-            author = actual_data["author"]
-            quote = actual_data["quote"]
+            author = actual_data["Author"]
+            quote = actual_data["Quote"]
             return author, quote
             # key does not exist. Raise KeyError
         raise KeyError("Key does not exist")
