@@ -1,4 +1,4 @@
-from resources.concret.welcome.welcome_message import WelcomeMessage
+from resources.concrete.welcome.welcome_message import WelcomeMessage
 
 
 def show_output(message: WelcomeMessage) -> None:

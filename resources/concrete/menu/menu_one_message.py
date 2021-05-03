@@ -1,4 +1,4 @@
-from resources.concret.welcome.welcome_message import WelcomeMessage
+from resources.concrete.welcome.welcome_message import WelcomeMessage
 from resources.funcs.is_data import is_int, is_in_range
 
 

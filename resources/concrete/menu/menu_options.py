@@ -1,6 +1,6 @@
-from resources.concret.menu.menu_all_messages import show_all_messages
-from resources.concret.menu.menu_one_message import show_one_message
-from resources.concret.menu.menu_exit import close_app
+from resources.concrete.menu.menu_all_messages import show_all_messages
+from resources.concrete.menu.menu_one_message import show_one_message
+from resources.concrete.menu.menu_exit import close_app
 from resources.context.switch import Switch
 
 
