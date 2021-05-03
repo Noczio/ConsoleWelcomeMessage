@@ -3,10 +3,11 @@ from resources.context.menu import Menu
 
 
 class AllMessageMenu(Menu):
+    """Show all messages implementation as class"""
 
     def __init__(self):
         self.message = WelcomeMessage()
-        self.max_index = len(self.message )
+        self.max_index = len(self.message)
 
     def __repr__(self) -> str:
         """Get author and quote from a WelcomeMessage instance in a for loop, then print those variables"""
@@ -16,9 +17,6 @@ class AllMessageMenu(Menu):
             quote = data["Quote"]
             output += f"\n*{author}, dice: {quote}"
         return output
-
-    def get_user_input(self, *args, **kwargs) -> int:
-        pass
 
 
 def show_all_messages():

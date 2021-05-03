@@ -1,10 +1,11 @@
 from resources.concrete.welcome.welcome_message import WelcomeMessage
-from resources.funcs.user_input import get_user_input
 from resources.context.menu import Menu
+from resources.funcs.user_input import get_user_input
 
 
 class OneMessageMenu(Menu):
     """Show only one message implementation as class"""
+
     def __init__(self):
         self.message = WelcomeMessage()
         # min_index is 0 if there are not messages, else set it to 1
