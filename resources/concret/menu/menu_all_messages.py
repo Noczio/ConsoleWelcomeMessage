@@ -1,7 +1,8 @@
 from resources.concret.welcome.welcome_message import WelcomeMessage
 
 
-def show_menu(message: WelcomeMessage) -> None:
+def show_output(message: WelcomeMessage) -> None:
+    """Get author and quote from a WelcomeMessage instance in a for loop, then print those variables"""
     for msg in message:
         author = msg["Author"]
         quote = msg["Quote"]
@@ -9,7 +10,6 @@ def show_menu(message: WelcomeMessage) -> None:
 
 
 def show_all_messages() -> None:
+    """Function that creates an instance of WelcomeMessage and then shows all messages"""
     message = WelcomeMessage()
-    show_menu(message)
-
-
+    show_output(message)

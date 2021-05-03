@@ -3,7 +3,7 @@ from typing import Any
 
 
 class Switch(ABC):
-    """Switch implementation from other languages to Python."""
+    """Switch abstract class for further implementation"""
     @classmethod
     def case(cls, attr: str) -> Any:
         if hasattr(cls, attr):

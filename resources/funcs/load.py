@@ -3,7 +3,7 @@ import json
 
 
 def load_json_file(file_path: str) -> Any:
-    """Try to load file and set data, if error raise Error"""
+    """Try to load file and return its data. If an error shows up, raise it"""
     try:
         with open(file_path, 'r', encoding="utf-8") as f:
             data = json.load(f)
