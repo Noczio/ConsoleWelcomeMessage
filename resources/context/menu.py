@@ -1,11 +1,10 @@
 from abc import ABC, abstractmethod
+from resources.context.limits import IndexLimits
 
 
-class Menu(ABC):
+class Menu(ABC, IndexLimits):
     """Abstract menu. repr must be implemented, but get_user_input is optional"""
     info_dictionary: dict = {}
-    min_index: int = 0
-    max_index: int = 0
 
     @abstractmethod
     def __repr__(self) -> str:

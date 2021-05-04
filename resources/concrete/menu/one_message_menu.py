@@ -6,22 +6,21 @@ from resources.funcs.user_input import get_user_input
 class OneMessageMenu(Menu):
     """Show only one message implementation as class"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self._message = WelcomeMessage()
         # min_index is 0 if there are not messages, else set it to 1
         self.min_index = 1 if len(self._message) > 0 else 0
         self.max_index = len(self._message)
-        self._user_index = 0
 
     def __repr__(self) -> str:
         """Get author and quote from a WelcomeMessage instance like a python list, then print those variables"""
-        author, quote = self._message[self._user_index]
+        author, quote = self._message[self.current_index]
         output = f"\n*{author}, dice: {quote}"
         return output
 
     def get_user_input(self, *args, **kwargs) -> int:
-        self._user_index = get_user_input("mensaje", self.min_index, self.max_index) - 1
-        return self._user_index
+        self.current_index = get_user_input("mensaje", self.min_index, self.max_index) - 1
+        return self.current_index
 
 
 def show_one_message() -> None:

@@ -1,8 +1,9 @@
+from resources.context.limits import IndexLimits
 from abc import ABC, abstractmethod
 from typing import Any
 
 
-class Message(ABC):
+class Message(ABC, IndexLimits):
     """Abstract Message. data property must be loaded. Also, __getitem__ and __next__ must be implemented."""
     _data: Any
 
