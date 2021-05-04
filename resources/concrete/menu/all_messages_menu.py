@@ -6,13 +6,13 @@ class AllMessageMenu(Menu):
     """Show all messages implementation as class"""
 
     def __init__(self):
-        self.message = WelcomeMessage()
-        self.max_index = len(self.message)
+        self._message = WelcomeMessage()
+        self.max_index = len(self._message)
 
     def __repr__(self) -> str:
         """Get author and quote from a WelcomeMessage instance in a for loop, then print those variables"""
         output = ""
-        for counter, data in enumerate(self.message, start=0):
+        for counter, data in enumerate(self._message, start=0):
             author = data["Author"]
             quote = data["Quote"]
             if counter < self.max_index - 1:
