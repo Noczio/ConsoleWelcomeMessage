@@ -3,7 +3,7 @@ from resources.context.menu import Menu
 
 
 class StartMessageMenu(Menu):
-    def __init__(self):
+    def __init__(self) -> None:
         # variables that can be accessed by functions and other modules
         self.info_dictionary = {1: "Ver todos los mensajes",
                                 2: "Ver un mensaje específico",

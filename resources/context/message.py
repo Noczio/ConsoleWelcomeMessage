@@ -18,6 +18,9 @@ class Message(ABC, IndexLimits):
     def __iter__(self) -> "Message":
         return self
 
+    def __len__(self) -> int:
+        return len(self.data)
+
     @property
     def data(self) -> Any:
         return self._data
@@ -25,6 +28,3 @@ class Message(ABC, IndexLimits):
     @data.setter
     def data(self, value: Any) -> None:
         self._data = value
-
-    def __len__(self) -> int:
-        return len(self.data)

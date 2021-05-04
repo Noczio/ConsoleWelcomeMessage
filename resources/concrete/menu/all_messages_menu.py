@@ -5,7 +5,7 @@ from resources.context.menu import Menu
 class AllMessageMenu(Menu):
     """Show all messages implementation as class"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self._message = WelcomeMessage()
         self.max_index = len(self._message)
 
@@ -22,7 +22,7 @@ class AllMessageMenu(Menu):
         return output
 
 
-def show_all_messages():
+def show_all_messages() -> None:
     menu = AllMessageMenu()
     number_of_messages = menu.max_index
     if number_of_messages > 0:
