@@ -24,7 +24,7 @@ class OneMessageMenu(Menu):
 
 
 def show_one_message() -> None:
-    """Function that shows only one message from a WelcomeMessage instance. User must provide a valid index"""
+    """Function that shows only one message from a OneMessageMenu instance. User must provide a valid index"""
     menu = OneMessageMenu()
     number_of_messages = menu.max_index
     if number_of_messages > 0:

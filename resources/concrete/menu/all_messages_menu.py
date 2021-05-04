@@ -23,6 +23,7 @@ class AllMessageMenu(Menu):
 
 
 def show_all_messages() -> None:
+    """Function that shows all messages from a AllMessageMenu instance"""
     menu = AllMessageMenu()
     number_of_messages = menu.max_index
     if number_of_messages > 0:
