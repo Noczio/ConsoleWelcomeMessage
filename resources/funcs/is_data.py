@@ -7,7 +7,7 @@ def is_in_range(value: int, low: int, high: int) -> bool:
 
 def is_int(value: str) -> bool:
     """Function that returns True if parameter can be parsed into a integer"""
-    is_valid = True
+    is_valid: bool = True
     try:
         int(value)
     except ValueError:

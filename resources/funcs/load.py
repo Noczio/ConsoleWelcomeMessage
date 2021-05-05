@@ -5,8 +5,8 @@ import json
 def load_json_file(file_path: str) -> Any:
     """Try to load file and return its data. If an error shows up, raise it"""
     try:
-        with open(file_path, 'r', encoding="utf-8") as f:
-            data = json.load(f)
+        with open(file_path, 'r', encoding="utf-8") as file:
+            data = json.load(file)
             return data
     except FileNotFoundError:
         raise FileNotFoundError("Path to JSON file was not found")

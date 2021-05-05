@@ -7,7 +7,7 @@ if __name__ == "__main__":
     try:
         while True:
             # First get a menu. menu_1, menu_2 or menu_3
-            selected_menu = get_selected_menu()
+            selected_menu: str = get_selected_menu()
             # Next, call switch MenuOptions with selected_menu
             MenuOptions.case(selected_menu)
     except Exception as e:

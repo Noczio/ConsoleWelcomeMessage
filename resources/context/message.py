@@ -20,11 +20,3 @@ class Message(ABC, IndexLimits):
 
     def __len__(self) -> int:
         return len(self.data)
-
-    @property
-    def data(self) -> Any:
-        return self._data
-
-    @data.setter
-    def data(self, value: Any) -> None:
-        self._data = value
