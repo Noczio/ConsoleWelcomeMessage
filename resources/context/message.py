@@ -19,4 +19,4 @@ class Message(ABC, IndexLimits):
         return self
 
     def __len__(self) -> int:
-        return len(self.data)
+        return len(self._data)
